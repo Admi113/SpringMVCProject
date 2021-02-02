@@ -32,6 +32,12 @@
 <%--    MB <form:radiobutton path="carBrand" value="Mers"/>--%>
     <form:radiobuttons path="carBrand"  items="${employee.carBrands}"/>
     <br><br>
+    Foreign Language(s)
+<%--    EN<form:checkbox path="languages" value="English"/>--%>
+<%--    FR<form:checkbox path="languages" value="French"/>--%>
+<%--    De<form:checkbox path="languages" value="Deutch"/>--%>
+    <form:checkboxes path="languages" items="${employee.languageList}"/>
+    <br><br>
     <input type="submit" value="OK"/>
 
 
