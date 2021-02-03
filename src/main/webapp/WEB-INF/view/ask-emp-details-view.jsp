@@ -22,6 +22,10 @@
     <form:errors path="phoneNumber"/>
 
     <br><br>
+    Email <form:input path="email"/>
+    <form:errors path="email"/>
+
+    <br><br>
     Salary <form:input path="salary"/>
     <form:errors path="salary"/>
 

@@ -1,5 +1,6 @@
 package com.DmitriyNikanorov.spring.mvc;
 
+import com.DmitriyNikanorov.spring.mvc.validation.CheckEmail;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 
@@ -27,6 +28,9 @@ public class Employee {
     @Pattern(regexp = "\\d{3}-\\d{2}-\\d{2}",
             message = "pls use pattern XXX-XX-XX")
     private String phoneNumber;
+
+    @CheckEmail(value = "abc.com",message = "email must ends with abc.com")
+    private String email;
 
     public String getPhoneNumber() {
         return phoneNumber;
@@ -123,6 +127,14 @@ public class Employee {
 
     public void setLanguageList(Map<String, String> languageList) {
         this.languageList = languageList;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @Override
