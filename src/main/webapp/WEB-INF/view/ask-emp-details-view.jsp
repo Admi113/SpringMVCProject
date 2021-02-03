@@ -13,10 +13,18 @@
 
 <form:form action="showDetails" modelAttribute="employee">
     Name <form:input path="name"/>
+    <form:errors path="name"/>
     <br><br>
     Surname <form:input path="surName"/>
+    <form:errors path="surName"/>
+    <br><br>
+    Phone number <form:input path="phoneNumber"/>
+    <form:errors path="phoneNumber"/>
+
     <br><br>
     Salary <form:input path="salary"/>
+    <form:errors path="salary"/>
+
     <br><br>
     Department<form:select path="department">
     <%--    <form:option value="InfoTeh" label="IT"/>--%>
@@ -27,15 +35,15 @@
 </form:select>
 
     Which car do u want?
-<%--    BMW <form:radiobutton path="carBrand" value="BMV"/>--%>
-<%--    Audi <form:radiobutton path="carBrand" value="Audi"/>--%>
-<%--    MB <form:radiobutton path="carBrand" value="Mers"/>--%>
-    <form:radiobuttons path="carBrand"  items="${employee.carBrands}"/>
+    <%--    BMW <form:radiobutton path="carBrand" value="BMV"/>--%>
+    <%--    Audi <form:radiobutton path="carBrand" value="Audi"/>--%>
+    <%--    MB <form:radiobutton path="carBrand" value="Mers"/>--%>
+    <form:radiobuttons path="carBrand" items="${employee.carBrands}"/>
     <br><br>
     Foreign Language(s)
-<%--    EN<form:checkbox path="languages" value="English"/>--%>
-<%--    FR<form:checkbox path="languages" value="French"/>--%>
-<%--    De<form:checkbox path="languages" value="Deutch"/>--%>
+    <%--    EN<form:checkbox path="languages" value="English"/>--%>
+    <%--    FR<form:checkbox path="languages" value="French"/>--%>
+    <%--    De<form:checkbox path="languages" value="Deutch"/>--%>
     <form:checkboxes path="languages" items="${employee.languageList}"/>
     <br><br>
     <input type="submit" value="OK"/>
